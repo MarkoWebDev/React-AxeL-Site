@@ -41,9 +41,9 @@ const MidFilterSection = () => {
 
   return (
     <div className="mx-auto pt-72 pb-56" id="news">
-      <div className="grid grid-cols-2 justify-items-center items-center">
+      <div className="sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center">
         <motion.div
-          className="w-4/5 mx-auto pl-24"
+          className="sm:pt-10 sm:w-full sm:pl-4 w-4/5 mx-auto pl-24"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -56,8 +56,8 @@ const MidFilterSection = () => {
           <h2
             className={
               theme === "light"
-                ? "w-96 text-6xl font-bold font-inter no-underline aligin-middle tracking-wide normal-case leading-none text-dark"
-                : "w-96 text-6xl font-bold font-inter no-underline aligin-middle tracking-wide normal-case leading-none text-white"
+                ? "sm:text-3xl sm:w-full w-96 text-6xl font-bold font-inter no-underline aligin-middle tracking-wide normal-case leading-none text-dark"
+                : "sm:text-3xl sm:w-full w-96 text-6xl font-bold font-inter no-underline aligin-middle tracking-wide normal-case leading-none text-white"
             }
           >
             Check out some of the news

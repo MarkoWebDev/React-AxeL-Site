@@ -61,4 +61,16 @@
       transform: translateY(-20px);
     }
   }
+  @media (max-width: 639px) {
+    .front {
+      display: block;
+      padding: 14px 12px;
+      border-radius: 25px;
+      font-size: 1.15rem;
+      background: #4169e1;
+      color: white;
+      font-family: "Inter";
+      transform: translateY(-6px);
+    }
+  }
 }

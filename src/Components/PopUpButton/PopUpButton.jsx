@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
+import { Tooltip } from "@material-tailwind/react";
 
-const PopUpButton = () => {
+const PopUpButton = ({ handleScroll }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -37,7 +38,7 @@ const PopUpButton = () => {
           whileHover={{ scale: "0.9" }}
           variants={itemVariants}
           onClick={handleClick}
-          className="rounded-full flex text-white flex-col fixed right-14 bottom-6 z-10 bg-blue-600 px-6 py-4 cursor-pointer hover:bg-blue-200 duration-700 ease-in-out"
+          className="sm:right-4 sm:bottom-20 rounded-full flex text-white flex-col fixed right-14 bottom-6 z-20 bg-blue-600 px-6 py-4 cursor-pointer hover:bg-blue-200 duration-700 ease-in-out"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +55,25 @@ const PopUpButton = () => {
             />
           </svg>
         </motion.button>
+        <Tooltip content="Back to the top">
+          <div className="sm:block sm:left-4 sm:bottom-20 absolute left-14 hidden rounded-full text-white flex-col bottom-6 z-10 bg-dark px-6 py-4 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              onClick={handleScroll}
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+        </Tooltip>
       </div>
     </>
   );
