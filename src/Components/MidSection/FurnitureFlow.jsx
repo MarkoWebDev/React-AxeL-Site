@@ -7,7 +7,7 @@ const FurnitureFlow = () => {
   return (
     <div>
       <img
-        className="bg-center bg-no-repeat bg-cover h-full w-full"
+        className="sm:hidden bg-center bg-no-repeat bg-cover h-full w-full"
         src={theme === "light" ? flowLight : flowDark}
         alt="furniture flow"
       ></img>

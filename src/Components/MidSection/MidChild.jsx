@@ -11,22 +11,22 @@ const MidChild = ({ data, click }) => {
           return (
             <motion.div
               key={item.id}
-              className="relative flex flex-col z-10"
+              className="sm:pt-10 sm:right-2 relative flex flex-col z-10"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{
-                y: click ? 50 : 0,
-                x: click ? 50 : 0,
+                y: click ? 20 : 0,
+                x: click ? 20 : 0,
                 opacity: 1,
               }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", duration: 1.5 }}
             >
-              <div className="w-[500px]">
+              <div className="sm:w-full w-[500px]">
                 <h3
                   className={
                     theme === "light"
-                      ? "text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark pb-4"
-                      : "text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white pb-4"
+                      ? "sm:text-4xl text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark pb-4"
+                      : "sm:text-4xl text-6xl font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white pb-4"
                   }
                 >
                   {item.title}
@@ -37,8 +37,8 @@ const MidChild = ({ data, click }) => {
                   <p
                     className={
                       theme === "light"
-                        ? "text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-                        : "text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
+                        ? "sm:text-2xl text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
+                        : "sm:text-2xl text-3xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
                     }
                   >
                     {item.text}

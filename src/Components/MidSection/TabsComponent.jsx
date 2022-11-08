@@ -16,14 +16,14 @@ const TabsComponent = () => {
       <Tabs
         id="custom-animation"
         value="bedroom"
-        className="grid grid-cols-2 justify-items-center items-center content-between w-full"
+        className="sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center content-between w-full"
       >
-        <div className="w-4/5 pl-24">
+        <div className="sm:w-full sm:pl-4 w-4/5 pl-24">
           <h1
             className={
               theme === "light"
-                ? "text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-                : "text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
+                ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
+                : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
             }
           >
             Features
@@ -31,8 +31,8 @@ const TabsComponent = () => {
           <p
             className={
               theme === "light"
-                ? "text-2xl  pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-                : "text-2xl  pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
+                ? "sm:text-xl text-2xl  pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
+                : "sm:text-xl text-2xl  pb-4 font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
             }
           >
             AxeL offers many great features. You can create your own room,
@@ -40,7 +40,7 @@ const TabsComponent = () => {
             and so much more. Take a snek peek at each of them.
           </p>
 
-          <TabsHeader className="flex justify-center items-center content-center bg-gray-100">
+          <TabsHeader className="sm:flex-col flex justify-center items-center content-center bg-gray-100">
             {tabsData.map(({ label, value }) => (
               <Tab className="" key={value} value={value}>
                 <p className="text-royalBlue font-inter leading-normal no-underline align-middle tracking-wide normal-case">

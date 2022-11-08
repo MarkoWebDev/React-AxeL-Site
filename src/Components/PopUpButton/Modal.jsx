@@ -13,7 +13,7 @@ const Modal = ({ open, setOpen }) => {
   return (
     <div>
       <motion.div
-        className="bg-white relative z-20 flex flex-col rounded-2xl"
+        className="bg-white fixed right-4 bottom-2 z-20 flex flex-col rounded-2xl"
         initial={{ scale: 1, opacity: 0, height: 0, width: 0 }}
         animate={{
           x: open ? -30 : 0,
@@ -53,7 +53,7 @@ const Modal = ({ open, setOpen }) => {
           </div>
           <Tooltip content="Close" placement="left">
             <div
-              className="absolute top-4 right-4 text-white cursor-pointer"
+              className=" absolute top-4 right-4 text-white cursor-pointer"
               onClick={() => setOpen(false)}
             >
               <svg
